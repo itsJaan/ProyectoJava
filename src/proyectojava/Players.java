@@ -23,7 +23,7 @@ public class Players {
         con=cons;
         
     }    
-    public String Usuarios(String us){
+    /*public String Usuarios(String us){
         for(u=0 ;u<usuario.length;u++){
             usuario[u]=us;
         }
@@ -34,6 +34,6 @@ public class Players {
             contras[c]=con;
         }
         return contras[c];    
-    }
+    }*/
     
 }

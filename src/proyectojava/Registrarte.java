@@ -10,22 +10,17 @@ package proyectojava;
  * @author Javier
  */
 public class Registrarte extends javax.swing.JFrame {
-    String users [] = new String [5];
+    /*String users [] = new String [5];
     String contra [] = new String [5];
     int pos_act = -1;
-    int pos_tot = -1;
+    int pos_tot = -1;*/
     public Registrarte(){
         initComponents();
         btnLogin.setEnabled(false);
     }
     
     public void Registrar(String regis){
-        for (int i = 0; i < users.length; i++) {
-            if (regis.equalsIgnoreCase(users[i])) {
-                txtPass.setText(contra[i]);
-                break;
-            }
-        }
+        
     }
     /**
      * Creates new form Registrarte
@@ -125,10 +120,17 @@ public class Registrarte extends javax.swing.JFrame {
 
     private void btnRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMouseClicked
         // TODO add your handling code here:
-        pos_tot++;
-        pos_act=pos_tot;
-        users[pos_act]=txtUs.getText();
-        contra[pos_act]=txtPass.getText();
+        
+        for (int c=0;c<5;c++){
+            String u=txtUs.getText();
+            String co=txtPass.getText();
+             
+            
+            Players p1 = new Players(u,co);
+            p1.usuario[c]=u;
+            p1.contras[c]=co;
+         
+        }
     }//GEN-LAST:event_btnRegistrarMouseClicked
 
     private void chklgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chklgActionPerformed
